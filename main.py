@@ -2,9 +2,11 @@ from robot import Robot
 from time import sleep
 import test_motors
 import test_power
+import test_servo
 
 TEST_MOTOR_BOARD = True
 TEST_POWER_BOARD = True
+TEST_SERVO_ASSEMBLY = True
 
 
 def test_board(board, test_function):
@@ -19,8 +21,13 @@ if __name__ == '__main__':
     if TEST_MOTOR_BOARD:
         for motor_board in r.motor_boards:
             test_board(motor_board, test_motors.test_motor_board)
+
     if TEST_POWER_BOARD:
         for power_board in r.power_boards:
             test_board(power_board, test_power.test_power_board)
+
+    if TEST_SERVO_ASSEMBLY:
+        for servo_assembly in r.servo_board:
+            test_board(servo_assembly, test_servo.test_servo_assembly)
     
     
