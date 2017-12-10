@@ -11,11 +11,11 @@ def test_power_board(power_board):
 
     for note, frequency in power_board.BUZZ_NOTES.items():
         print("Playing {} on buzzer".format(note))
-        power_board.buzz(0.5, note=note)
-        sleep(0.5)
+        power_board.buzz(1, note=note)
+        sleep(1)
         print("Playing {} on buzzer".format(note.upper()))
-        power_board.buzz(0.5, note=note.upper())
-        sleep(0.5)
+        power_board.buzz(1, note=note.upper())
+        sleep(1)
         print("Playing {} on buzzer as frequency {}".format(note, frequency))
-        power_board.buzz(0.5, frequency=frequency)
-        sleep(0.5)
+        power_board.buzz(1, frequency=frequency)
+        sleep(1)
