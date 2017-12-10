@@ -23,11 +23,11 @@ def test_servos(servo_assembly):
         print("Setting servo {} to 1".format(servo_pin))
         servo_assembly.servos[servo_pin].position = 1
         sleep(1)
-        print("Setting servo {} to 0".format(servo_pin))
-        servo_assembly.servos[servo_pin].position = 0
-        sleep(1)
         print("Setting servo {} to -1".format(servo_pin))
         servo_assembly.servos[servo_pin].position = -1
+        sleep(1)
+        print("Setting servo {} to 0".format(servo_pin))
+        servo_assembly.servos[servo_pin].position = 0
         sleep(1)
 
 
