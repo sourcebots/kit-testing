@@ -41,10 +41,10 @@ def test_motor_board(motor_board):
     motor_board.m1 = COAST
     sleep(1)
 
-    for i in range(-1, 1.1, 0.2):
-        print("Setting motor power to ", i)
-        motor_board.m0 = i
-        motor_board.m1 = i
+    for i in range(-100, 101, 2):
+        print("Setting motor power to ", i / 100)
+        motor_board.m0 = i / 100
+        motor_board.m1 = i / 100
         sleep(0.1)
 
     motor_board.m0 = COAST
