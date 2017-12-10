@@ -27,7 +27,7 @@ if __name__ == '__main__':
             test_board(power_board, test_power.test_power_board)
 
     if TEST_SERVO_ASSEMBLY:
-        for servo_assembly in r.servo_board:
+        for servo_assembly in r.servo_boards:
             test_board(servo_assembly, test_servo.test_servo_assembly)
     
     
