@@ -15,7 +15,7 @@ def test_analogue(servo_assembly):
     for i in range(5):
         values = servo_assembly.read_analogue()
         print("Got {} for analogue values".format(values))
-        assert len(values) == 6
+        assert len(values) == 4
         sleep(1)
 
 
