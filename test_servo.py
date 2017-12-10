@@ -8,14 +8,14 @@ def test_GPIO(servo_assembly):
     for pin_mode in PinMode:
         for pin in range(2, 13):
             print("Setting pin {} to {}".format(pin, pin_mode))
-            servo_assembly.gpio[pin].mode = pin_mode
+            servo_assembly.gpios[pin].mode = pin_mode
         sleep(1)
     ## TODO: Maybe we should test reading values too?
 
 
 def test_analogue(servo_assembly):
     for i in range(5):
-        values = r.servo_board.read_analogue()        
+        values = servo_assembly.read_analogue()
         print("Got {} for analogue values".format(values))
         sleep(1)
 
