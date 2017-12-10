@@ -35,8 +35,8 @@ def test_ultrasound(servo_assembly):
     for i in range(5):
         print("Testing ultrasound on pins 6 and 7")
         distance = servo_assembly.read_ultrasound(6, 7)
-        assert distance > 0.4
-        assert distance < 0.2
+        assert distance < 0.4
+        assert distance > 0.2
         print("Distance was {}".format(distance))
         sleep(1)
 
