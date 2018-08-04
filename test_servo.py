@@ -4,7 +4,7 @@ from time import sleep
 
 def test_GPIO(servo_assembly):
     for pin_mode in PinMode:
-        for pin in range(2, 13):
+        for pin in range(2, 14):
             print("Setting pin {} to {}".format(pin, pin_mode))
             servo_assembly.gpios[pin].mode = pin_mode
         sleep(1)
